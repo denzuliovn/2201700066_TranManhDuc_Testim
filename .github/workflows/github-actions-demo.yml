@@ -5,9 +5,9 @@ jobs:
   run-testimio-cli:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v4 # Cập nhật lên bản mới cho ổn định
+      - uses: actions/setup-node@v4
         with:
-          node-version: '18.17.0'
+          node-version: '20' # Sửa từ 18.17.0 thành 20
       - run: npm install -g @testim/testim-cli
       - run: testim --token "vefLQO3pdsIASAdnQo8KzZvlGajE1JAcQHRsLWf74gujQCSULI" --project "usw2dXL8Y3tDSh3NW3hYqzQc" --grid "Testim-HA-Grid"
